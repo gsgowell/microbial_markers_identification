@@ -1,2 +1,2 @@
 # microbial_markers_identification
-The data folder contains the profiles of two datasets (i.e., D1 (accession number in GenBank: PRJNA422434) and D2 (accession numbers: PRJEB15179 and PRJEB14155)) used in our manuscript; The demo folder gives an example that using five classifiers for T2D prediction using 5-fold CV.
+The data folder contains the profiles of two datasets (i.e., D1 (accession number in GenBank: PRJNA422434) and D2 (accession numbers: PRJEB15179 and PRJEB14155)) used in our manuscript and two trained model (diabet_identify_species_d1_minus_d2_plus.h5 and diabet_identify_gene_d1_minus_d2_plus.h5; trained on D1-) for tesing on D2+ using our markers; The demo folder gives an example that using five classifiers for T2D prediction using 5-fold CV.
