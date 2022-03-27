@@ -1,5 +1,7 @@
 The files and the code in this repository correspond to the following manuscript:
+
 A Neural Network-based Framework to Understand the Type 2 Diabetes-related Alteration of the Human Gut Microbiome
+
 Our goal with this work was providing a framework for identifying the disease-related biomarkers. Compared with traditional methods, our method would likely capture some easily ignored biomarkers that varied little across samples.  
 
 Tutorials
