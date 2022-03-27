@@ -27,6 +27,7 @@ Our framework can be applied for all kinds of profile data. In our manuscript, w
 We also provided two trained model (‘diabet_identify_species_d1_minus_d2_plus.h5’ and ‘diabet_identify_gene_d1_minus_d2_plus.h5’; trained on D1- for testing on D2+ using our markers.
 
 Random Forest feature ranking
+
 As for the species-level microbial profile, each species can be viewed as the feature of the samples. And it is similar to the gene profile (i.e., each gene can be viewed as the feature of the samples). In our framework, we firstly used Random Forest method to calculated the importance of each feature (i.e., species or gene) in the profile data. In our study, we used the Matlab package ‘RF_Class_C’ for the relevant calculation. Of cause, other Random Forest tools can also be applied for this step, such as Python RandomForestClassifier. Specifically, as for the D1 species-level profile, ‘X_368’ and ‘Y_368’ are the input of the feature ranking step. The importance scores of the 270 species in the profile can be obtained by implementing the Random Forest tool. Then, we reordered the species in ‘X_368’ via the importance scores to construct a new numerical matrix ‘X_368_rf’, which is also provided in d_368.mat. Some details for the feature ranking data are as following:
 
 ‘X_368_rf’ : A 368*270 numerical matrix M’ that represents the species-level microbial profile of D1 with Random Forest feature ranking. The first column of M’ represents the relative abundances of the species with most importance score for all samples, while the last column of M’ represents that with least importance score for all samples.
@@ -36,7 +37,9 @@ As for the species-level microbial profile, each species can be viewed as the fe
 ‘X_391_rf’: The species-level microbial profile of D1 with Random Forest feature ranking.
 
 Neural Network (NN) classifying for identifying the biomarkers
+
 In this step, the NN model was applied for determining how many features should be selected. That is, the profile data with different number of features was feed to the NN classifier respectively, and the one with best classification performance was the final result. The python code of this step is provided in the demo fold of this repository (i.e., main_kfold.py). The input of the this step is the feature ranked profile data and the corresponding state data. For example, the dataset[‘X_368_rf’][:, 0:10] represents the ranked profile data with first 10 features. Together with dataset[‘Y_368’] as the input, by implementing the code, we can obtain the performance of the classifier (e.g., NN) with the 10 features. 
 
 Regression analyzing
+
 The python code of this step is provided in the demo fold of this repository (i.e., regression_kfold.py). The input of the this step is the profile data with the selected features (e.g., dataset[‘X_368_rf’][:, 0:40])and the corresponding T2D-related factors (e.g., dataset[‘Y_fbg’]).
