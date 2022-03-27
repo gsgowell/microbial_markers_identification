@@ -1,4 +1,3 @@
-[Tutorials.docx](https://github.com/gsgowell/microbial_markers_identification/files/8358034/Tutorials.docx)
 The files and the code in this repository correspond to the following manuscript:
 
 A Neural Network-based Framework to Understand the Type 2 Diabetes-related Alteration of the Human Gut Microbiome
