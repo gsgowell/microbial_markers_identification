@@ -34,7 +34,7 @@ As for the species-level microbial profile, each species can be viewed as the fe
 
 ‘X_gene_rf’: The gene profile of D1 with Random Forest feature ranking.
 
-‘X_391_rf’: The species-level microbial profile of D1 with Random Forest feature ranking.
+‘X_391_rf’: The species-level microbial profile of D2 with Random Forest feature ranking.
 
 Neural Network (NN) classifying for identifying the biomarkers
 
